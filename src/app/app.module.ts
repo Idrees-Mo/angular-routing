@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-gaurd.service';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,9 @@ import { AuthGuard } from './auth-gaurd.service';
     EditServerComponent,
     ServerComponent,
     NotFoundComponent,
+    FormsComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [ServersService, AuthService, AuthGuard],
   bootstrap: [AppComponent],
 })
